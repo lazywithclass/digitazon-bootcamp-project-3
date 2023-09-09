@@ -38,10 +38,7 @@ export default function Automatic() {
         if (j >= impulse.length) {
           return
         }
-
         setCurrent(morse[i])
-        console.log(morse[i])
-
         setActive(true)
         await sleep(
           impulse[j] === '.' ? DOT_IMPULSE_LENGTH : LINE_IMPULSE_LENGTH)
