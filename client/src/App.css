@@ -1,0 +1,15 @@
+.app {
+  text-align: center;
+}
+
+.body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+}
+
+.morse-current {
+  font-size: 40px;
+}
