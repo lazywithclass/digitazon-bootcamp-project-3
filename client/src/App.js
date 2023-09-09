@@ -6,9 +6,9 @@ import Listener from './components/Listener'
 function App() {
   return (
     <div className="App">
-    <header >
-        {/* <Listener /> */}
-      <Automatic />
+      <header >
+        <Listener />
+        {/* <Automatic /> */}
       </header>
     </div>
   )

@@ -1,27 +1,19 @@
 import { useState, useEffect } from 'react'
+import Screen from './Screen'
 
 export default function Listener() {
 
-  const DEFAULT_BACKGROUD = 'black'
-  const [background, setBackground] = useState(DEFAULT_BACKGROUD)
-
-  function turnWhite() {
-    setBackground('white')
-  }
-
-  function resetBackground() {
-    setBackground(DEFAULT_BACKGROUD)
-  }
+  const [active, setActive] = useState()
 
   useEffect(() => {
     function handleKeyUp(event) {
       if (event.key === " ") {
-        resetBackground()
+        setActive(false)
       }
     }
     function handleKeyDown(event) {
       if (event.key === " ") {
-        turnWhite()
+        setActive(true)
       }
     }
 
@@ -34,6 +26,8 @@ export default function Listener() {
   }, [])
 
   return (
-    <div className="App-header" style={{backgroundColor: background}}></div>
+    <div className="App-header">
+      <Screen active={active} />
+    </div>
   )
 }
